@@ -1,0 +1,39 @@
+<div class="container my-4">
+    <div class="card">
+        <div class="card-body">
+            <h1>Registrar Cliente</h1>
+            <p>Llenar la informacion del cliente para añadirlo a la lista por favor:</p>
+            <form [formGroup]="clientForm">
+                <div class="form-group">
+                    <label for="InputLastNames" class="form-label">Apellidos:</label>
+                    <input type="text" class="form-control" placeholder="Consigne el Apellido Materno"
+                        formControlName="last_names" />
+                    <label for="InputFirstNames" class="form-label">Nombres:</label>
+                    <input type="text" class="form-control" placeholder="Consigne Nombres"
+                        formControlName="first_names" />
+                    <label for="InputEmail" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" placeholder="Ingrese su correo electrónico"
+                        formControlName="email" />
+                    <label for="InputNumber" class="form-label">Número de Teléfono:</label>
+                    <input type="number" class="form-control" placeholder="Ingrese su número de teléfono"
+                        formControlName="n_phone" />
+                    <label for="InputNumber" class="form-label">Número de Documento:</label>
+                    <input type="number" class="form-control" placeholder="Ingrese su número de documento"
+                        formControlName="document_id_number" />
+                    <label for="InputDistrict" class="form-label">Distrito:</label>
+                    <input type="text" class="form-control" placeholder="Consigne Su Distrito"
+                        formControlName="district" />
+
+                    <label for="InputDirection" class="form-label">Direccion:</label>
+                    <input type="text" class="form-control" placeholder="Consigne Su Direccion"
+                        formControlName="direction" />
+                </div>
+                <label for="InputBirthday" class="form-label">Fecha de Cumpleaños:</label>
+                <input type="date" class="form-control mb-3" placeholder="Ingrese su fecha de cumpleaños"
+                    formControlName="birthdate" />
+                <button type="submit" class="btn btn-primary" (click)="addClient()">Guardar</button>
+                <button class="btn btn-danger" (click)="cancelOperation()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
